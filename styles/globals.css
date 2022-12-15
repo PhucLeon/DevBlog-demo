@@ -1,26 +1,22 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Sora:wght@600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
 
-* {
-  box-sizing: border-box;
-}
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .layout {
+        @apply w-screen h-screen overflow-auto flex flex-col items-center bg-yellow-700 text-neutral-50 font-roboto
+    }
+
+    .label {
+        @apply bg-red-300 px-2 mt-2 font-semibold rounded-xl text-zinc-800  
+    }
+
+    .label-selected {
+        @apply bg-sky-800 px-2 mt-2 font-semibold rounded-xl text-neutral-300 
+    }
 }
